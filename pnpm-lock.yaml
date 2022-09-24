@@ -12,6 +12,7 @@ specifiers:
   '@angular/platform-browser': ^14.0.0
   '@angular/platform-browser-dynamic': ^14.0.0
   '@angular/router': ^14.0.0
+  '@ant-design/icons-angular': ^14.1.0
   '@tailwindcss/line-clamp': ^0.4.2
   '@types/jasmine': ~4.0.0
   autoprefixer: ^10.4.12
@@ -47,6 +48,7 @@ devDependencies:
   '@angular-devkit/build-angular': 14.2.3_6e1d38125102e2af5bb77222f459455e
   '@angular/cli': 14.0.7
   '@angular/compiler-cli': 14.2.3_6966ce1ab3128b776ebc1bf51ab13517
+  '@ant-design/icons-angular': 14.1.0_9e3365627a2b5e6f7bb5e13ff30957a2
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.1.8
   '@types/jasmine': 4.0.3
   autoprefixer: 10.4.12_postcss@8.4.16
@@ -448,7 +450,6 @@ packages:
     resolution: {integrity: sha512-Txy4KpHrp3q4XZdfgOBqLl+lkQIc3tEvHXOimRN1giX1AEC7mGtyrO9p8iRGJ3FLuVMGa2gNEzQyghVymLttKQ==}
     dependencies:
       '@ctrl/tinycolor': 3.4.1
-    dev: false
 
   /@ant-design/icons-angular/14.1.0_9e3365627a2b5e6f7bb5e13ff30957a2:
     resolution: {integrity: sha512-SvWi8p4L+cCfTGtezeUq1s8kahZEO1UVf7ZR615Fix3c2l9OnAJi+niDkq2fZHjpiarFrt8HoZ2EhMAMN7jfbg==}
@@ -464,7 +465,6 @@ packages:
       '@ant-design/colors': 5.1.1
       rxjs: 7.5.6
       tslib: 2.4.0
-    dev: false
 
   /@assemblyscript/loader/0.10.1:
     resolution: {integrity: sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==}
@@ -1833,7 +1833,6 @@ packages:
   /@ctrl/tinycolor/3.4.1:
     resolution: {integrity: sha512-ej5oVy6lykXsvieQtqZxCOaLT+xD4+QNarq78cIYISHmZXshCvROLudpQN3lfL8G0NL7plMSSK+zlyvCaIJ4Iw==}
     engines: {node: '>=10'}
-    dev: false
 
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}

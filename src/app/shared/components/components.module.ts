@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SongItemComponent } from './song-item/song-item.component';
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {CountPipe} from "../count.pipe";
+import {PlayerModule} from "./player/player.module";
 
 
 
@@ -13,11 +14,13 @@ import {CountPipe} from "../count.pipe";
   ],
   imports: [
     CommonModule,
-    NzIconModule
+    NzIconModule,
+    PlayerModule
   ],
   exports: [
     SongItemComponent,
-    CountPipe
+    CountPipe,
+    PlayerModule
   ]
 })
 export class ComponentsModule { }
