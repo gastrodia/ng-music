@@ -1,0 +1,57 @@
+<div class="home">
+  <div class="home-banner">
+    <div class="home-banner__wrapper">
+      <nz-carousel nzAutoPlay [nzEnableSwipe]="false">
+        <div class="" nz-carousel-content *ngFor="let item of banners">
+          <a class="block" [href]="item.url" target="_blank">
+            <img loading="lazy" draggable="false" [src]="item.imageUrl" alt="">
+          </a>
+        </div>
+      </nz-carousel>
+    </div>
+  </div>
+  <div class="container mx-auto flex overflow-hidden home-main">
+    <div class="flex-1 overflow-hidden">
+      <div class="flex items-center py-2 border-b-2">
+        <div class="flex items-center text-base">
+          <span class="text-red-700" nz-icon nzType="fire" nzTheme="outline"></span>
+          <label class="ml-1">热门推荐</label>
+        </div>
+        <ul class="flex-1 flex mb-0 px-4">
+          <li *ngFor="let item of hotPlayList">
+            <a class="text-gray-500 px-2 hover:underline">{{item.name}}</a>
+          </li>
+        </ul>
+        <a class="flex items-center">
+          <span class="mr-1">更多</span>
+          <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+        </a>
+      </div>
+      <ul class="grid grid-cols-6 gap-4 mt-4">
+        <app-song-item *ngFor="let item of songSheet" [song]="item"></app-song-item>
+      </ul>
+    </div>
+    <div class="w-1/6 ml-4 border-l home-right">
+      <home-member></home-member>
+      <div class="pl-4">
+        <div class="border-b text-base py-2">入住歌手</div>
+        <ul class="mt-4 home-singer">
+          <li class="border home-singer-item" *ngFor="let item of singerList">
+            <a href="" class="flex">
+              <div class="w-14 h-14 overflow-hidden">
+                <img loading="lazy" [src]="item.img1v1Url" alt="" class="h-full w-full object-cover">
+              </div>
+              <div class="flex-1 ml-2 flex flex-col justify-around">
+                <span class="text-base">{{item.name}}</span>
+                <div class="flex">
+                  <label>专辑数：</label>
+                  <span>{{item.albumSize}}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

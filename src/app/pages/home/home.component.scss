@@ -1,0 +1,21 @@
+.home {
+  &-banner {
+    background: #001529;
+    overflow: hidden;
+
+
+    &__wrapper {
+      width: 1080px;
+      height: 400px;
+      margin: auto;
+    }
+  }
+
+  &-singer {
+    &-item {
+      & + & {
+        margin-top: 12px;
+      }
+    }
+  }
+}

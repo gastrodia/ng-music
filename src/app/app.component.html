@@ -1,0 +1,51 @@
+<div id="app">
+  <nz-layout class="layout">
+    <nz-header class="header">
+      <div class="container mx-auto flex">
+        <h1 class="mb-0 text-white">网易云音乐</h1>
+
+        <div class="flex-1 mx-4">
+          <ul nz-menu nzTheme="dark" nzMode="horizontal">
+            <li nz-menu-item>发现</li>
+            <li nz-menu-item>歌单</li>
+          </ul>
+        </div>
+        <div class="flex">
+          <div class="">
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+              <input type="text" nz-input placeholder="input search text"/>
+            </nz-input-group>
+            <ng-template #suffixIconSearch>
+              <span class="ml-2" nz-icon nzType="search"></span>
+            </ng-template>
+          </div>
+
+          <div class="ml-4">
+            <a nz-dropdown [nzDropdownMenu]="menu" class="text-white">
+              <span>登录</span>
+              <span class="ml-1" nz-icon nzType="down" nzTheme="outline"></span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu nzSelectable>
+                <li nz-menu-item>
+                  <span nz-icon nzType="mobile" nzTheme="outline"></span>
+                  <span class="ml-2">手机登录</span>
+                </li>
+                <li nz-menu-item>
+                  <span nz-icon nzType="user-add" nzTheme="outline"></span>
+                  <span class="ml-2">注册</span>
+                </li>
+              </ul>
+            </nz-dropdown-menu>
+          </div>
+        </div>
+      </div>
+    </nz-header>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+    <nz-footer class="text-center">
+      Ant Design ©2022 Implement By Angular 14
+    </nz-footer>
+  </nz-layout>
+</div>
