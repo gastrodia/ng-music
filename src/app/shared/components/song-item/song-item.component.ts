@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {SongSheetItem} from "src/app/services/types/song.types";
 
 @Component({
@@ -20,6 +20,15 @@ export class SongItemComponent implements OnInit {
     trackNumberUpdateTime: 0,
     type: 0
   }
+
+  @Output() onPlay = new EventEmitter<number>()
+
+  handlePlaySong(e: Event) {
+    e.stopPropagation()
+    e.stopImmediatePropagation()
+    this.onPlay.emit(this.song.id)
+  }
+
   constructor() { }
 
   ngOnInit(): void {

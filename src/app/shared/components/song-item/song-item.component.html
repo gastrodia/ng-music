@@ -1,11 +1,13 @@
 <ng-container>
-  <a class="block song-item" href="">
+  <a class="block song-item">
     <div class="relative song-item-wrapper">
       <img loading="lazy" class="block" [src]="song.picUrl" alt="">
       <div class="absolute inset-x-0 bottom-0 flex items-center bg-gray-900 text-white bg-opacity-50 overflow-hidden px-2 py-1">
         <svg class="iconpark-icon mr-2 w-3.5 h-3.5"><use href="#headset"></use></svg>
         <span class="flex-1 overflow-ellipsis overflow-hidden">{{song.playCount | count}}</span>
-        <span nz-icon nzType="play-circle" nzTheme="outline"></span>
+        <button class="flex items-center hover:text-blue-600" (click)="handlePlaySong($event)">
+          <span nz-icon nzType="play-circle" nzTheme="outline"></span>
+        </button>
       </div>
     </div>
     <div class="line-clamp-2">{{song.name}}</div>

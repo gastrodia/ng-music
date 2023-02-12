@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import {ServicesModule} from "./services.module";
 import {HttpClient} from "@angular/common/http";
 import {MusicSheetItem} from "./types/sheet.types";
+import {MusicItem, ToneQuality} from "./types/music.types";
 
-// 歌单
-
+// 歌曲
 @Injectable({providedIn: ServicesModule})
-export class SheetService {
+export class MusicService {
 
   constructor(private http: HttpClient) { }
 
-  getSongSheet(songId: number) {
-    return this.http.get<MusicSheetItem>('/api/playlist/detail', {params: {id: songId}})
+  getMusicPlayUrl(id: number | string, level: ToneQuality = 'standard') {
+    return this.http.get<MusicItem>('/api/song/url/v1', {params: {id, level}})
   }
 }

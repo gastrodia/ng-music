@@ -5,24 +5,37 @@
     <div class="absolute top-0 right-4 -translate-y-full h-6 w-10 bg-amber-200 text-center">
       <a nz-icon nzType="lock" nzTheme="outline"></a>
     </div>
-    <div class="max-w-screen-lg mx-auto h-full flex items-center">
-      <div class="flex items-end text-2xl">
-        <a nz-icon nzType="left-circle" nzTheme="outline"></a>
-        <a class="text-3xl mx-3" nz-icon nzType="play-circle" nzTheme="outline"></a>
-        <a nz-icon nzType="right-circle" nzTheme="outline"></a>
-      </div>
-      <div class="flex-1 flex mx-4">
-        <div></div>
-        <div class="flex flex-1">进度条</div>
+    <div class="max-w-screen-lg mx-auto h-full relative">
+      <div class="h-full flex items-center">
+        <div class="flex items-end text-2xl">
+          <a nz-icon nzType="left-circle" nzTheme="outline"></a>
+          <a class="text-3xl mx-3" nz-icon nzType="play-circle" nzTheme="outline"></a>
+          <a nz-icon nzType="right-circle" nzTheme="outline"></a>
+        </div>
+        <div class="flex-1 flex mx-4">
+          <div></div>
+          <div class="flex flex-1">进度条</div>
+          <div class="flex">
+            <label>00:00</label>
+            <label>/</label>
+            <label>00:00</label>
+          </div>
+        </div>
         <div class="flex">
-          <label>00:00</label>
-          <label>/</label>
-          <label>00:00</label>
+          <svg class="iconpark-icon w-4 h-4"><use href="#folder-plus"></use></svg>
+          <svg class="iconpark-icon w-4 h-4"><use href="#share"></use></svg>
+        </div>
+        <div class="ml-4 h-full flex items-center">
+          <div class="h-full relative flex items-center">
+            <svg class="iconpark-icon w-4 h-4"><use href="#volume-notice"></use></svg>
+            <!--          <div class="absolute top-0 left-0 -translate-y-full bg-indigo-300">123</div>-->
+          </div>
+          <svg class="iconpark-icon w-4 h-4"><use href="#loop-once"></use></svg>
+          <svg class="iconpark-icon w-4 h-4"><use href="#music-list"></use></svg>
         </div>
       </div>
-      <div class="flex">
-        <svg class="iconpark-icon w-6 h-6"><use href="#folder-plus"></use></svg>
-        <svg class="iconpark-icon w-6 h-6"><use href="#share"></use></svg>
+      <div class="absolute inset-x-0 top-0 -translate-y-full bg-amber-200">
+        123
       </div>
     </div>
   </div>

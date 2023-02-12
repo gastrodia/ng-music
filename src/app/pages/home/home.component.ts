@@ -4,6 +4,8 @@ import {HotPlayItem, SongSheetItem} from "../../services/types/song.types";
 import {SingerItem} from "../../services/types/singer.types";
 import {ActivatedRoute} from "@angular/router";
 import {map} from 'rxjs/operators'
+import {SheetService} from "../../services/sheet.service";
+import {MusicService} from "../../services/music.service";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +19,26 @@ export class HomeComponent implements OnInit {
   songSheet: SongSheetItem[] = []
   singerList: SingerItem[] = []
 
-  constructor(private route: ActivatedRoute) {
+
+  handleOnSongPlay(id: number) {
+    this.sheetService.getSongSheet(id).subscribe({
+      next: (v) => {
+        const {playlist: {tracks}} = v
+        const [first] = tracks
+        this.musicService.getMusicPlayUrl(first.id).subscribe({
+          next: (o) => {
+            console.log(o)
+          }
+        })
+      }
+    })
+  }
+
+  constructor(
+    private route: ActivatedRoute,
+    private sheetService: SheetService,
+    private musicService: MusicService
+  ) {
     route.data.pipe(map(v => v['homeData'])).subscribe({
       next: ([banners, hotPlayList, songSheet, singerList]) => {
         this.banners = banners || []
